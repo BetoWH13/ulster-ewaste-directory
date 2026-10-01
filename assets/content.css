@@ -8,7 +8,7 @@ h2{letter-spacing:-.03em}
 .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:start}
 section{padding:34px 0}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.soft,.callout{background:var(--blue)}
+.soft{background:#eaf4ee}.callout{background:var(--blue)}
 .warn,.notice{background:var(--amber);border:1px solid #efd79a}
 .warn{border-radius:var(--radius)}
 .notice{border-radius:12px;padding:14px;margin-top:14px}
