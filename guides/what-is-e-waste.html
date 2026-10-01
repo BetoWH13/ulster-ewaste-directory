@@ -187,16 +187,15 @@
         .grid {
           grid-template-columns: 1fr;
         }
-        .nav {
-          display: none;
-        }
       }
     </style>
+    <link rel="stylesheet" href="../assets/accessibility.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
       <div class="wrap">
-        <nav>
+        <nav aria-label="Primary">
           <a class="brand" href="../index.html">Ulster E‑Waste Directory</a>
           <div class="nav">
             <a href="../index.html#locations">Locations</a
@@ -206,10 +205,12 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="hero">
         <div class="wrap">
-          <div class="eyebrow">🧭 Guide · Classification</div>
+          <div class="eyebrow">
+            <span aria-hidden="true">🧭</span> Guide · Classification
+          </div>
           <h1>What Is — and Isn’t — E‑Waste?</h1>
           <p class="lead">
             Electronics-containing does not automatically mean e-waste.

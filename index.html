@@ -459,9 +459,6 @@
         .towns {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
-        .navlinks {
-          display: none;
-        }
         .footer-grid {
           grid-template-columns: 1fr;
         }
@@ -493,8 +490,10 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="assets/accessibility.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="topbar">
       <div class="wrap">
         <div>Independent directory for Ulster County, New York</div>
@@ -503,9 +502,10 @@
     </div>
     <header>
       <div class="wrap">
-        <nav>
+        <nav aria-label="Primary">
           <a class="brand" href="#"
-            ><span class="mark">U</span><span>Ulster E‑Waste Directory</span></a
+            ><span class="mark" aria-hidden="true">U</span
+            ><span>Ulster E‑Waste Directory</span></a
           >
           <div class="navlinks">
             <a href="#locations">Locations</a><a href="#towns">By Town</a
@@ -517,12 +517,13 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="hero">
         <div class="wrap hero-grid">
           <div>
             <div class="eyebrow">
-              ♻ Independent local directory · Ulster County NY
+              <span aria-hidden="true">♻</span> Independent local directory ·
+              Ulster County NY
             </div>
             <h1>Find the right place for old electronics.</h1>
             <p class="lead">
@@ -557,13 +558,18 @@
             </p>
             <div class="quick-list">
               <a class="quick" href="items/television.html"
-                ><span>📺 Television</span><span>→</span></a
+                ><span><span aria-hidden="true">📺</span> Television</span
+                ><span aria-hidden="true">→</span></a
               ><a class="quick" href="items/laptop.html"
-                ><span>💻 Laptop</span><span>→</span></a
+                ><span><span aria-hidden="true">💻</span> Laptop</span
+                ><span aria-hidden="true">→</span></a
               ><a class="quick" href="items/printer-scanner.html"
-                ><span>🖨 Printer</span><span>→</span></a
+                ><span><span aria-hidden="true">🖨</span> Printer</span
+                ><span aria-hidden="true">→</span></a
               ><a class="quick" href="items/rechargeable-battery.html"
-                ><span>🔋 Rechargeable battery</span><span>→</span></a
+                ><span
+                  ><span aria-hidden="true">🔋</span> Rechargeable battery</span
+                ><span aria-hidden="true">→</span></a
               >
             </div>
           </aside>
@@ -875,29 +881,29 @@
           </div>
           <div class="things">
             <a class="thing" href="items/laptop.html"
-              ><div class="icon">💻</div>
+              ><div class="icon" aria-hidden="true">💻</div>
               <h3>Laptop</h3>
               <p>
                 Sell or donate if useful. Handle your data before recycling.
               </p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/desktop-computer.html"
-              ><div class="icon">🖥️</div>
+              ><div class="icon" aria-hidden="true">🖥️</div>
               <h3>Desktop computer</h3>
               <p>Reuse, parts, repair and electronics recycling routes.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/television.html"
-              ><div class="icon">📺</div>
+              ><div class="icon" aria-hidden="true">📺</div>
               <h3>Television</h3>
               <p>Acceptance varies more than most people expect.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/computer-monitor.html"
-              ><div class="icon">🖥</div>
+              ><div class="icon" aria-hidden="true">🖥</div>
               <h3>Computer monitor</h3>
               <p>Local electronics programs and item-specific restrictions.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/printer-scanner.html"
-              ><div class="icon">🖨️</div>
+              ><div class="icon" aria-hidden="true">🖨️</div>
               <h3>Printer / scanner</h3>
               <p>
                 Give away if useful; recycle through qualifying programs when
@@ -905,60 +911,60 @@
               </p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/cell-phone.html"
-              ><div class="icon">📱</div>
+              ><div class="icon" aria-hidden="true">📱</div>
               <h3>Cell phone</h3>
               <p>Resale, trade-in and phone-specific take-back routes.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/tablet-e-reader.html"
-              ><div class="icon">📲</div>
+              ><div class="icon" aria-hidden="true">📲</div>
               <h3>Tablet / e-reader</h3>
               <p>Reuse value first; electronics recycling when truly done.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/game-console.html"
-              ><div class="icon">🎮</div>
+              ><div class="icon" aria-hidden="true">🎮</div>
               <h3>Game console</h3>
               <p>Often worth selling before recycling.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/hard-drive-ssd.html"
-              ><div class="icon">💾</div>
+              ><div class="icon" aria-hidden="true">💾</div>
               <h3>Hard drive / SSD</h3>
               <p>The data question comes before the disposal question.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/digital-camera-camcorder.html"
-              ><div class="icon">📷</div>
+              ><div class="icon" aria-hidden="true">📷</div>
               <h3>Camera / camcorder</h3>
               <p>
                 Resale or repair first; local acceptance differs from laptops.
               </p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/gps-navigation-device.html"
-              ><div class="icon">🧭</div>
+              ><div class="icon" aria-hidden="true">🧭</div>
               <h3>GPS device</h3>
               <p>
                 An electronic device with its own practical disposal quirks.
               </p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/rechargeable-battery.html"
-              ><div class="icon">🔋</div>
+              ><div class="icon" aria-hidden="true">🔋</div>
               <h3>Rechargeable battery</h3>
               <p>
                 Separate battery take-back route. Do not treat it like a TV.
               </p>
               <span class="go">See battery options →</span></a
             ><a class="thing" href="items/cables-chargers-accessories.html"
-              ><div class="icon">🔌</div>
+              ><div class="icon" aria-hidden="true">🔌</div>
               <h3>Cables & chargers</h3>
               <p>Give away useful extras; recycle the rest appropriately.</p>
               <span class="go">See local options →</span></a
             ><a class="thing" href="items/microwave.html"
-              ><div class="icon">🍿</div>
+              ><div class="icon" aria-hidden="true">🍿</div>
               <h3>Microwave oven</h3>
               <p>
                 Contains electronics, but generally follows an appliance route.
               </p>
               <span class="go">See disposal options →</span></a
             ><a class="thing" href="items/small-household-appliances.html"
-              ><div class="icon">☕</div>
+              ><div class="icon" aria-hidden="true">☕</div>
               <h3>Small appliances</h3>
               <p>
                 Repair, donate, scrap or dispose — not automatically e-waste.

@@ -187,16 +187,15 @@
         .grid {
           grid-template-columns: 1fr;
         }
-        .nav {
-          display: none;
-        }
       }
     </style>
+    <link rel="stylesheet" href="../assets/accessibility.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
       <div class="wrap">
-        <nav>
+        <nav aria-label="Primary">
           <a class="brand" href="../index.html">Ulster E‑Waste Directory</a>
           <div class="nav">
             <a href="../index.html#locations">Locations</a
@@ -206,10 +205,12 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="hero">
         <div class="wrap">
-          <div class="eyebrow">❄ Guide · Seasonal routing</div>
+          <div class="eyebrow">
+            <span aria-hidden="true">❄</span> Guide · Seasonal routing
+          </div>
           <h1>Winter Electronics Recycling</h1>
           <p class="lead">
             UCRRA’s regular Kingston electronics collection is seasonal. When

@@ -187,16 +187,15 @@
         .grid {
           grid-template-columns: 1fr;
         }
-        .nav {
-          display: none;
-        }
       }
     </style>
+    <link rel="stylesheet" href="../assets/accessibility.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
       <div class="wrap">
-        <nav>
+        <nav aria-label="Primary">
           <a class="brand" href="../index.html">Ulster E‑Waste Directory</a>
           <div class="nav">
             <a href="../index.html#locations">Locations</a
@@ -206,10 +205,12 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="hero">
         <div class="wrap">
-          <div class="eyebrow">🚙 Guide · Large loads</div>
+          <div class="eyebrow">
+            <span aria-hidden="true">🚙</span> Guide · Large loads
+          </div>
           <h1>Large Quantity Electronics</h1>
           <p class="lead">
             A few devices and a carload are not always handled the same way. For
