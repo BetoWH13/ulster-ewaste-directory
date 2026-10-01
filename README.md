@@ -5,8 +5,8 @@ Independent, ad-supported directory for electronics recycling, reuse, and dispos
 ## Current build
 
 - Homepage
-- 4 verified location pages
-- 2 town routing pages
+- 6 verified location pages
+- 5 town routing pages
 - 15 item guides
 - 3 support guides
 - Noindex QA link map
