@@ -6,18 +6,23 @@ permissions:
   contents: write
 jobs:
   unpack:
-    if: ${{ hashFiles('site.tgz') != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Unpack audited site
         run: |
-          tar -xzf site.tgz -C .
-          rm site.tgz
+          if [ -f site.tgz ]; then
+            tar -xzf site.tgz -C .
+            rm site.tgz
+          fi
       - name: Commit unpacked site
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Add complete Ulster E-Waste directory site"
-          git push
+          if git diff --cached --quiet; then
+            echo "No unpack changes to commit"
+          else
+            git commit -m "Add complete Ulster E-Waste directory site"
+            git push
+          fi
