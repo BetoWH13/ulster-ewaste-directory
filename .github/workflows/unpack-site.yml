@@ -1,28 +1,27 @@
-name: Unpack site bundle
+name: Install audited site
 on:
   push:
     branches: [main]
 permissions:
   contents: write
 jobs:
-  unpack:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Unpack audited site
+      - name: Rebuild and unpack audited site
         run: |
-          if [ -f site.tgz ]; then
-            tar -xzf site.tgz -C .
-            rm site.tgz
-          fi
-      - name: Commit unpacked site
+          cat .bootstrap/part*.txt > site.tgz.b64
+          base64 -d site.tgz.b64 > site.tgz
+          gzip -t site.tgz
+          tar -xzf site.tgz -C .
+          rm -f site.tgz site.tgz.b64
+          rm -rf .bootstrap
+          rm -f .github/workflows/unpack-site.yml
+      - name: Commit complete site
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          if git diff --cached --quiet; then
-            echo "No unpack changes to commit"
-          else
-            git commit -m "Add complete Ulster E-Waste directory site"
-            git push
-          fi
+          git commit -m "Add complete Ulster E-Waste directory site"
+          git push
