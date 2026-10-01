@@ -6,7 +6,8 @@ Independent, ad-supported directory for electronics recycling, reuse, and dispos
 
 - Homepage
 - 6 verified location pages
-- 5 town routing pages
+- 21 town/city routing pages
+- Countywide municipality coverage hub
 - 15 item guides
 - 3 support guides
 - Noindex QA link map
