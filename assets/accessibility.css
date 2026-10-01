@@ -25,7 +25,11 @@ header nav{display:flex;align-items:center;justify-content:space-between;gap:20p
 .brand{font-weight:900;text-decoration:none}
 .nav,.navlinks{display:flex;gap:18px;color:#46524b;font-size:.92rem}
 footer{margin-top:32px;padding:34px 0;background:#16251e;color:#dbe8e0}
-footer a{color:inherit}
+footer a{color:#dbe8e0}
+footer p{color:#c6d5cc}
+footer .note,footer .fine{color:#b8c9bf}
+footer a:hover{color:#fff}
+footer .legal-links{margin-top:14px;font-size:.9rem}
 .skip-link{position:fixed;top:12px;left:12px;z-index:1000;padding:10px 14px;border:2px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink);font-weight:800;transform:translateY(-160%)}
 .skip-link:focus{transform:translateY(0)}
 :where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #b85c00;outline-offset:3px}
